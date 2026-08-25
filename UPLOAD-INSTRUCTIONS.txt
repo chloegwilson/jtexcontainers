@@ -1,0 +1,19 @@
+J-TEX CONTAINERS WEBSITE FILES
+
+Upload EVERYTHING inside this folder to the GitHub repository:
+- index.html
+- styles.css
+- script.js
+- the entire assets folder
+
+Important:
+Keep the assets folder name exactly "assets".
+
+After uploading, GitHub Pages can be enabled from:
+Settings → Pages → Deploy from a branch → main → /(root)
+
+The site phone links are already set to:
+979-820-1520
+
+The domain to connect later:
+jtexcontainers.com

@@ -1,0 +1,140 @@
+
+:root {
+  --lime: #a8e800;
+  --lime-bright: #b7ff00;
+  --black: #080a09;
+  --charcoal: #111512;
+  --charcoal-2: #1a201c;
+  --white: #ffffff;
+  --muted: #c7cec8;
+  --line: #293129;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.5;
+}
+img { display: block; width: 100%; }
+a { color: inherit; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1.2fr auto 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 14px 5vw;
+  background: rgba(8,10,9,.96);
+  border-bottom: 1px solid #262c27;
+  backdrop-filter: blur(8px);
+}
+.brand { text-decoration: none; display: inline-flex; flex-direction: column; width: fit-content; }
+.brand-mark {
+  color: var(--lime-bright);
+  font-weight: 1000;
+  font-style: italic;
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: .82;
+  letter-spacing: -2px;
+  transform: skew(-7deg);
+  text-shadow: 2px 2px 0 #000;
+}
+.brand-sub { font-size: 13px; font-weight: 900; letter-spacing: 1px; margin-top: 5px; }
+.brand-tag { font-size: 9px; color: var(--lime); font-weight: 900; letter-spacing: 1px; }
+nav { display: flex; gap: 24px; font-size: 13px; font-weight: 800; text-transform: uppercase; }
+nav a { text-decoration: none; }
+nav a:hover { color: var(--lime); }
+.header-phone { justify-self: end; text-align: right; text-decoration: none; color: var(--lime); font-size: 12px; font-weight: 800; }
+.header-phone strong { color: #fff; font-size: 21px; }
+.hero {
+  min-height: 690px;
+  position: relative;
+  background: url("assets/truck-trailer.jpg") center 52%/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.80) 37%, rgba(0,0,0,.20) 68%, rgba(0,0,0,.05) 100%);
+}
+.hero-content { position: relative; width: min(650px, 90vw); margin-left: 6vw; padding: 80px 0; }
+.eyebrow { color: var(--lime); letter-spacing: 2px; font-size: 13px; font-weight: 900; margin: 0 0 10px; }
+h1, h2, h3 { margin-top: 0; text-transform: uppercase; line-height: .98; }
+h1 { font-size: clamp(58px, 7.6vw, 112px); letter-spacing: -4px; margin-bottom: 24px; }
+h1 span { color: var(--lime); }
+h2 { font-size: clamp(36px, 5vw, 64px); letter-spacing: -2px; }
+.hero-copy { color: #e4e6e4; max-width: 560px; font-size: 19px; margin-bottom: 28px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
+.btn {
+  display: inline-block;
+  padding: 15px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 1000;
+  letter-spacing: .5px;
+}
+.btn-solid { background: var(--lime); color: #0a0d0a; }
+.btn-outline { border: 2px solid var(--lime); color: var(--lime); }
+.btn-outline.dark { color: #0a0d0a; }
+.phone-big { font-size: 30px; font-weight: 900; letter-spacing: 2px; margin: 22px 0 0; }
+.section { padding: 88px 5vw; background: #f7f8f6; color: #111; }
+.section-heading { max-width: 780px; margin-bottom: 34px; }
+.section-heading h2 { color: #111; }
+.cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.card { border-radius: 16px; overflow: hidden; background: white; border: 1px solid #ddd; box-shadow: 0 12px 35px rgba(0,0,0,.08); }
+.card img { height: 250px; object-fit: cover; }
+.card-body { padding: 24px; }
+.card h3 { font-size: 27px; margin-bottom: 12px; }
+.card a { color: #5b8300; font-weight: 900; }
+.delivery { display: grid; grid-template-columns: 1.2fr 1fr; min-height: 560px; }
+.delivery-photo img { height: 100%; object-fit: cover; }
+.delivery-copy { padding: 80px 6vw; background: var(--charcoal); display: flex; flex-direction: column; justify-content: center; }
+.delivery-copy p { color: var(--muted); font-size: 18px; }
+.features { display: grid; gap: 8px; margin: 18px 0 28px; font-weight: 800; }
+.about { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: center; }
+.about-photo img { max-height: 560px; object-fit: cover; border-radius: 16px; }
+.about-copy p { font-size: 18px; color: #444; }
+.gallery-section { background: #0c0f0d; color: white; }
+.gallery-section .section-heading h2 { color: white; }
+.gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.gallery img { height: 280px; object-fit: cover; border-radius: 12px; border: 1px solid #2d332e; }
+.final-cta { text-align: center; padding: 90px 5vw; background: linear-gradient(180deg, #111512, #050605); }
+.final-cta h2 { font-size: clamp(42px, 6vw, 74px); margin-bottom: 16px; }
+.phone-link { color: var(--lime); font-size: clamp(40px, 6vw, 70px); font-weight: 1000; text-decoration: none; }
+.centered { justify-content: center; margin-top: 24px; }
+footer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 35px 5vw; border-top: 1px solid #202620; color: #bdc4be; background: #050605; font-size: 13px; }
+footer a { color: var(--lime); text-decoration: none; font-weight: 900; }
+@media (max-width: 900px) {
+  .site-header { grid-template-columns: 1fr auto; }
+  nav { display: none; }
+  .hero { min-height: 610px; background-position: 58% center; }
+  .hero-overlay { background: linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.70) 65%, rgba(0,0,0,.25)); }
+  .cards, .gallery { grid-template-columns: 1fr 1fr; }
+  .delivery, .about { grid-template-columns: 1fr; }
+  .delivery-photo img { height: 420px; }
+}
+@media (max-width: 620px) {
+  .site-header { padding: 12px 16px; }
+  .brand-mark { font-size: 31px; }
+  .brand-sub { font-size: 10px; }
+  .brand-tag { font-size: 7px; }
+  .header-phone { font-size: 9px; }
+  .header-phone strong { font-size: 14px; }
+  .hero { min-height: 650px; background-position: 63% center; }
+  .hero-content { margin-left: 20px; margin-right: 20px; padding-top: 130px; }
+  h1 { font-size: 56px; letter-spacing: -3px; }
+  .hero-copy { font-size: 16px; }
+  .phone-big { font-size: 24px; }
+  .section { padding: 62px 20px; }
+  .cards, .gallery { grid-template-columns: 1fr; }
+  .card img, .gallery img { height: 240px; }
+  .delivery-copy { padding: 60px 22px; }
+  .about { gap: 28px; }
+  footer { grid-template-columns: 1fr; text-align: center; }
+}
